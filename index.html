@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #4CAF50; /* Updated background color */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #registration-container {
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        #display-data {
+            margin-top: 20px;
+        }
+
+        #display-data p {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333; /* Label text color */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="registration-container">
+    <h1>Registration Form</h1>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="button" onclick="displayData()">Register</button>
+    </form>
+
+    <div id="display-data"></div>
+</div>
+
+<script>
+    function displayData() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+
+        var displayContainer = document.getElementById('display-data');
+        displayContainer.innerHTML = "<p>First Name: " + firstName + "</p>" +
+                                      "<p>Last Name: " + lastName + "</p>" +
+                                      "<p>Email: " + email + "</p>";
+    }
+</script>
+
+</body>
+</html>
